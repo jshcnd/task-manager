@@ -1,3 +1,7 @@
+# 📝 Task Manager App
+
+A simple web-based task manager built with React to help manage tasks efficiently.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
