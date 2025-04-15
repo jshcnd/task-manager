@@ -1,0 +1,68 @@
+.filter-container {
+  margin-bottom: 25px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.filter-buttons,
+.priority-filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.filter-buttons button,
+.priority-filters button {
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.filter-buttons button:hover,
+.priority-filters button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.filter-buttons button.active,
+.priority-filters button.active {
+  background: linear-gradient(135deg, #6c5ce7, #a8a4e6);
+  color: white;
+  box-shadow: 0 4px 12px rgba(108, 92, 231, 0.3);
+}
+
+.priority-filters button[data-priority="high"] {
+  border-left: 4px solid #ff6b6b;
+  background: linear-gradient(to right, rgba(255, 107, 107, 0.1), rgba(255, 255, 255, 0.9));
+}
+
+.priority-filters button[data-priority="medium"] {
+  border-left: 4px solid #ffa502;
+  background: linear-gradient(to right, rgba(255, 165, 2, 0.1), rgba(255, 255, 255, 0.9));
+}
+
+.priority-filters button[data-priority="low"] {
+  border-left: 4px solid #00b894;
+  background: linear-gradient(to right, rgba(0, 184, 148, 0.1), rgba(255, 255, 255, 0.9));
+}
+
+@media (max-width: 768px) {
+  .filter-buttons,
+  .priority-filters {
+    flex-direction: column;
+  }
+  
+  .filter-buttons button,
+  .priority-filters button {
+    width: 100%;
+  }
+} 
